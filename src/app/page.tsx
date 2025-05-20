@@ -51,7 +51,7 @@ export default function Home() {
       <section className="max-w-2xl px-4">
         <h2 className="text-3xl font-bold mb-4 text-zinc-800 dark:text-white">🙋 About Me</h2>
         <p className="text-zinc-600 dark:text-zinc-300">
-          Hello! I'm a passionate developer who enjoys building web applications with modern tools and great UI/UX.
+          Hello! I&apos;m a passionate developer who enjoys building web applications with modern tools and great UI/UX.
           I specialize in React, TypeScript, and backend APIs. I love working on both personal and real-world projects.
         </p>
       </section>
