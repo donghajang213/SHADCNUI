@@ -2,16 +2,14 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-start min-h-screen bg-white dark:bg-zinc-900 px-6 py-12 text-center space-y-24">
       
       {/* ✅ Hero Section */}
-      <section>
+      <section id="home">
         <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-zinc-900 dark:text-white">
           👋 Welcome to My Website
         </h1>
@@ -25,7 +23,7 @@ export default function Home() {
       </section>
 
       {/* ✅ Projects Section */}
-      <section className="w-full px-4 max-w-4xl">
+      <section id="projects" className="w-full px-4 max-w-4xl">
         <h2 className="text-3xl font-bold mb-8 text-zinc-800 dark:text-white">💼 Projects</h2>
         <div className="grid gap-6 sm:grid-cols-2">
           <Card>
@@ -48,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* ✅ About Section */}
-      <section className="max-w-2xl px-4">
+      <section id="about" className="max-w-2xl px-4">
         <h2 className="text-3xl font-bold mb-4 text-zinc-800 dark:text-white">🙋 About Me</h2>
         <p className="text-zinc-600 dark:text-zinc-300">
           Hello! I&apos;m a passionate developer who enjoys building web applications with modern tools and great UI/UX.
@@ -57,23 +55,9 @@ export default function Home() {
       </section>
 
       {/* ✅ Contact Section */}
-      <section className="w-full max-w-xl px-4">
+      <section id="contact" className="w-full max-w-xl px-4">
         <h2 className="text-3xl font-bold mb-6 text-zinc-800 dark:text-white">📩 Contact</h2>
-        <form className="flex flex-col gap-4 text-left">
-          <div>
-            <Label htmlFor="name">Name</Label>
-            <Input id="name" placeholder="Your name" />
-          </div>
-          <div>
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="you@example.com" />
-          </div>
-          <div>
-            <Label htmlFor="message">Message</Label>
-            <Textarea id="message" placeholder="Write your message here..." />
-          </div>
-          <Button type="submit" className="self-end mt-4">Send</Button>
-        </form>
+        <ContactForm />
       </section>
 
       {/* ✅ Footer */}

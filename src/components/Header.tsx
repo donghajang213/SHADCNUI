@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react"; // 햄버거 아이콘
+import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Header() {
@@ -12,16 +11,16 @@ export default function Header() {
   return (
     <header className="w-full px-6 py-4 border-b bg-white dark:bg-zinc-900 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-zinc-800 dark:text-white">
+        <a href="#home" className="text-xl font-bold text-zinc-800 dark:text-white">
           MySite
-        </Link>
+        </a>
 
         {/* 데스크탑 메뉴 */}
         <nav className="hidden md:flex gap-6 items-center text-sm text-zinc-700 dark:text-zinc-200">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/contact">Contact</Link>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         {/* 모바일 메뉴 */}
@@ -33,10 +32,10 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="flex flex-col gap-6 mt-12">
-              <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-              <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
-              <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
-              <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+              <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
+              <a href="#about" onClick={() => setIsOpen(false)}>About</a>
+              <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
+              <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
             </SheetContent>
           </Sheet>
         </div>
